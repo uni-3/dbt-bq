@@ -1,0 +1,11 @@
+# MacOS
+.DS_Store
+
+# Editors
+.idea/
+.vscode/
+
+# dbt
+target/
+dbt_packages/
+logs/
