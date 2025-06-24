@@ -26,6 +26,26 @@ blog:
       method: oauth
       schema: blog_info
 
+elementary:
+  target: dev
+  outputs:
+    dev:
+      type: bigquery
+      method: oauth
+      project: free-180413 # GCPプロジェクトID
+      dataset: elementary   # Elementary専用のデータセット名 (スキーマ名として機能)
+      threads: 1
+      timeout_seconds: 300
+      location: US
+    prod:
+      type: bigquery
+      method: oauth
+      project: free-180413 # GCPプロジェクトID
+      dataset: elementary   # Elementary専用のデータセット名 (スキーマ名として機能)
+      threads: 1
+      timeout_seconds: 300
+      location: US
+
     prod:
       type: bigquery 
       location: US
