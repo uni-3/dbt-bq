@@ -32,7 +32,6 @@ elementary:
     dev:
       type: bigquery
       method: oauth
-      project: free-180413 # GCPプロジェクトID
       dataset: elementary   # Elementary専用のデータセット名 (スキーマ名として機能)
       threads: 1
       timeout_seconds: 300
@@ -40,7 +39,6 @@ elementary:
     prod:
       type: bigquery
       method: oauth
-      project: free-180413 # GCPプロジェクトID
       dataset: elementary   # Elementary専用のデータセット名 (スキーマ名として機能)
       threads: 1
       timeout_seconds: 300
