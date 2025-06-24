@@ -1,0 +1,26 @@
+version: 2
+
+models:
+  - name: stg_parsed_blog_content
+    description: "ブログコンテンツのパース済みステージングモデル"
+    columns:
+      - name: title
+        description: "ブログ記事のタイトル"
+        tests:
+          - not_null:
+              config:
+                severity: error # null の場合にエラーとする
+      - name: created_at
+        description: "ブログ記事の作成日時"
+        tests:
+          - not_null:
+              config:
+                severity: error # null の場合にエラーとする
+      - name: slug
+        description: "ブログ記事のスラッグ"
+      - name: tags
+        description: "ブログ記事のタグ配列"
+      - name: len_content
+        description: "ブログ記事の本文長"
+      - name: content
+        description: "ブログ記事の元コンテンツ"
