@@ -6,7 +6,8 @@ select
     parse_timestamp(
         '%Y-%m-%dT%H:%M:%SZ',
         regexp_extract(
-            content, r'date: ([0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}Z)'
+            content,
+            r'publishDate: ([0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}Z)'
         )
     ) as created_at,
 
