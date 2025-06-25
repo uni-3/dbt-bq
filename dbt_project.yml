@@ -8,6 +8,9 @@ seed-paths: ["seeds"]
 test-paths: ["tests"]
 analysis-paths: ["analyses"]
 
+flags:
+  require_explicit_package_overrides_for_builtin_materializations: false
+
 models:
   main:
     blog:
@@ -43,3 +46,8 @@ models:
 # カスタム変数の設定（必要な場合）
 vars:
   schema_prefix: 'prod'
+  elementary:
+    slack_channel_name: "notify"
+    send_test_message_on_success: true # 成功時にもメッセージを送信するか (オプション)
+    # elementary_database: your_database # elementary の結果を保存するデータベース (オプション)
+    # elementary_schema: your_schema     # elementary の結果を保存するスキーマ (オプション)

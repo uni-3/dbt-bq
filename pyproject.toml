@@ -7,5 +7,9 @@ requires-python = ">=3.12"
 dependencies = [
     "dbt-core>=1.9.4",
     "dbt-bigquery>=1.9.1",
+    "elementary-data[bigquery]>=0.19.0",
 ]
+
+[tool.setuptools]
+py-modules = []
 

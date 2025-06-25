@@ -26,8 +26,20 @@ blog:
       method: oauth
       schema: blog_info
 
-    prod:
-      type: bigquery 
-      location: US
+elementary:
+  target: dev
+  outputs:
+    dev:
+      type: bigquery
       method: oauth
-      schema: blog_info
+      dataset: elementary   # Elementary専用のデータセット名 (スキーマ名として機能)
+      threads: 1
+      timeout_seconds: 300
+      location: US
+    prod:
+      type: bigquery
+      method: oauth
+      dataset: elementary   # Elementary専用のデータセット名 (スキーマ名として機能)
+      threads: 1
+      timeout_seconds: 300
+      location: US
