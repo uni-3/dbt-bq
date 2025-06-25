@@ -43,9 +43,3 @@ elementary:
       threads: 1
       timeout_seconds: 300
       location: US
-
-    prod:
-      type: bigquery 
-      location: US
-      method: oauth
-      schema: blog_info

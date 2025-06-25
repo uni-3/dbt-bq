@@ -10,3 +10,6 @@ dependencies = [
     "elementary-data[bigquery]>=0.19.0",
 ]
 
+[tool.setuptools]
+py-modules = []
+
